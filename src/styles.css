@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+.row{
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    border: 1px solid #13005d;
+}
+
+
+/* body */
+.col-2{
+    width: 25%;
+    padding: 10px;
+}
+
+.img-circle{
+    width: 15%;
+    margin-right: 5%;
+}
+
+.item{
+    display: block;
+}

@@ -1,0 +1,57 @@
+
+/* Menu */
+.title{
+    padding-left: 40px;
+    padding-top: 30px;
+    width: 50%;
+    z-index: 1;
+}
+
+.img{
+    width: 50%;
+    margin-left: -13%;
+}
+
+.col-6 img{
+    width: 100%;
+    border-radius: 0px 0px 0px 100px;
+    height: 250px;
+    width: 132%;
+}
+
+h1{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #13005d;
+}
+
+small{
+    color: #03a9f4;
+}
+
+.row{
+    height: 250%;
+}
+
+
+/* busqueda*/
+
+.input-group{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.form-control{
+    padding: 12px 24px;
+    border: 1px solid #555;
+    outline: none;
+    border-radius: 7px 0px 0px 7px;
+    width: 300px;
+}
+
+.input-group select{
+    border-radius: 0px 7px 7px 0px;
+}
