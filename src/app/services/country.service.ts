@@ -20,6 +20,7 @@ export class CountryService {
     this.getContinent('Africa').subscribe( (resp) => {
       this.countries = resp;
     }); 
+    this.cargarFavoritos();
   }
 
   getCountries( ): Observable<CountryResponse[]>{

@@ -13,6 +13,7 @@ export class ContinentComponent implements OnInit {
   public text: string = '';
   public countries: CountryResponse[] = [];
   public loading: boolean = true;
+  public ocultar: boolean = false;
 
 
   constructor(private activatedRoute: ActivatedRoute,
@@ -30,6 +31,16 @@ export class ContinentComponent implements OnInit {
       this.countries = resp;
       this.loading = false;
     }); 
+  }
+
+
+  addFavorite(){
+
+  }
+
+  ocultarPopUp(){
+    console.log(this.ocultar);
+    this.ocultar = false;
   }
             
 }

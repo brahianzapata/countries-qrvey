@@ -1,1 +1,9 @@
-<p>favorites works!</p>
+<!-- countries and continents  -->
+
+<div class="row">
+    <div class="col-2">
+      <app-countries [countries]="countries" [titulo]="text" *ngIf="this.countries.length > 0"></app-countries>
+      <h3 *ngIf="this.countries.length === 0">No hay favoritos</h3>
+    </div>
+</div>
+  

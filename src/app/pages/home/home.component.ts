@@ -9,8 +9,6 @@ import { CountryService } from '../../services/country.service';
 })
 export class HomeComponent implements OnInit {
 
-  public countries: CountryResponse[] = [];
-
   public countriesAfrica: CountryResponse[] = [];
   public countriesAmerica: CountryResponse[] = [];
   public countriesAsia: CountryResponse[] = [];
@@ -27,23 +25,23 @@ export class HomeComponent implements OnInit {
 
   constructor( private countryService: CountryService ) {
     this.countryService.getContinent('Africa').subscribe( (resp) => {
-      this.countriesAfrica = resp;
+      this.countriesAfrica = resp.sort(this.ordenar);
       this.loadingAfrica = false;
     }); 
     this.countryService.getContinent('Americas').subscribe( (resp) => {
-      this.countriesAmerica = resp;
+      this.countriesAmerica = resp.sort(this.ordenar);
       this.loadingAmerica = false;
     }); 
     this.countryService.getContinent('Asia').subscribe( (resp) => {
-      this.countriesAsia = resp;
+      this.countriesAsia = resp.sort(this.ordenar);
       this.loadingAsia = false;
     }); 
     this.countryService.getContinent('Europe').subscribe( (resp) => {
-      this.countriesEuropa = resp;
+      this.countriesEuropa = resp.sort(this.ordenar);
       this.loadingEuropa = false;
     }); 
     this.countryService.getContinent('Oceania').subscribe( (resp) => {
-      this.countriesOceania = resp;
+      this.countriesOceania = resp.sort(this.ordenar);
       this.loadingOceania = false;
     }); 
   }
@@ -51,5 +49,15 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ordenar(a: CountryResponse, b: CountryResponse){
+    if (a.name.common > b.name.common ) {
+      return 1;
+    }
+    if (a.name.common  < b.name.common ) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  }
 
 }

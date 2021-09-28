@@ -6,13 +6,13 @@ export interface CountryResponse {
     cca3:         string;
     cioc?:        string;
     independent?: boolean;
-    status:       Status;
+    status?:       string;
     unMember:     boolean;
     currencies?:  Currencies;
     idd:          Idd;
     capital?:     string[];
     altSpellings: string[];
-    region:       Region;
+    region?:       string;
     subregion?:   string;
     languages?:   { [key: string]: string };
     translations: { [key: string]: Translation };
