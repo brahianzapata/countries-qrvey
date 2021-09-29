@@ -28,19 +28,20 @@ export class ContinentComponent implements OnInit {
   
   buscarContinent( texto: string){
     this.countryService.getContinent(texto).subscribe( (resp) => {
-      this.countries = resp;
+      this.countries = resp.sort(this.ordenar);
       this.loading = false;
     }); 
   }
 
-
-  addFavorite(){
-
-  }
-
-  ocultarPopUp(){
-    console.log(this.ocultar);
-    this.ocultar = false;
+  ordenar(a: CountryResponse, b: CountryResponse){
+    if (a.name.common > b.name.common ) {
+      return 1;
+    }
+    if (a.name.common  < b.name.common ) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
   }
             
 }

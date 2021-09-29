@@ -28,7 +28,9 @@ export class CountryService {
   }
 
   getcountry( country: string){
-    return this.http.get<CountryResponse[]>(`${ this.baseUrl }/name/${country}`);
+    return this.http.get<CountryResponse[]>(`${ this.baseUrl }/name/${country}`).pipe(
+      catchError( err => of(null) )
+    );
   }
 
   getContinent( continent: String){

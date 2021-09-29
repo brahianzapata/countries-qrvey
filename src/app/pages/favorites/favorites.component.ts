@@ -13,11 +13,22 @@ export class FavoritesComponent implements OnInit {
   public countries: CountryResponse[] = [];
 
   constructor(private countryService: CountryService) { 
-    this.countries = this.countryService.countriesLocalStorage;
-    console.log(this.countries);
+    this.countries = this.countryService.countriesLocalStorage.sort(this.ordenar);
   }
 
   ngOnInit(): void {
+  }
+
+
+  ordenar(a: CountryResponse, b: CountryResponse){
+    if (a.name.common > b.name.common ) {
+      return 1;
+    }
+    if (a.name.common  < b.name.common ) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
   }
 
 }

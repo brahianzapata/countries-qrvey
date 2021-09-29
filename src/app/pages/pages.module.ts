@@ -19,7 +19,7 @@ import { ShareModule } from '../share/share.module';
   imports: [
     CommonModule,
     HttpClientModule,
-    ShareModule
+    ShareModule,
   ]
 })
 export class PagesModule { }

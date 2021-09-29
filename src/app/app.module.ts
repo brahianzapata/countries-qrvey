@@ -6,14 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PagesModule } from './pages/pages.module';
-import { FavoritePipe } from './pipes/favorite.pipe';
 import { ShareModule } from './share/share.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    FavoritePipe
+    HomeComponent
   ],
   imports: [
     BrowserModule,

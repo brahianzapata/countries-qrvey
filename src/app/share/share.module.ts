@@ -4,6 +4,7 @@ import { CountriesComponent } from './countries/countries.component';
 import { MenuComponent } from './menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import { DetailComponent } from './detail/detail.component';
+import { FavoritoPipe } from './favorito.pipe';
 
 
 
@@ -11,7 +12,8 @@ import { DetailComponent } from './detail/detail.component';
   declarations: [
     CountriesComponent,
     MenuComponent,
-    DetailComponent
+    DetailComponent,
+    FavoritoPipe
   ],
   imports: [
     CommonModule,
