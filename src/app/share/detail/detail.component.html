@@ -2,7 +2,7 @@
 
   <div  class="modal"  >
     <div class="modal-contenido">
-        <button (click)="ocultarPopUp()" type="button">X</button>
+        <button (click)="ocultarPopUp()" type="button" class="cerrar">X</button>
         <h2 >
           {{ modalService.countrySeleccionado[0].name.common }}
           <svg  (click)="addFavorite(modalService.countrySeleccionado[0])"  *ngIf="(modalService.countrySeleccionado[0].name.common | favorito) === false"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star start-empty" viewBox="0 0 16 16">
@@ -16,15 +16,12 @@
         <h4>Population: 50</h4>
         <h4>Capital: {{ modalService.countrySeleccionado[0].capital }}</h4>
 
-        <h4>Currency: {{ modalService.countrySeleccionado[0].currencies | json}}</h4>
-        <h4>Language: {{ modalService.countrySeleccionado[0].languages | json}}</h4>
+        <h4>Currency: {{ modalService.currency[0] }}</h4>
+        <h4>Language: {{ modalService.languages[0]  }}</h4>
 
         <h4>Border Countries: {{ modalService.countrySeleccionado[0].borders }}</h4>
         <h4>Flag:</h4>
         <img [src]="modalService.countrySeleccionado[0].flags[0]">
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal" (click)="ocultarPopUp()">Close</button>
-        </div>
     </div>  
 
   </div>

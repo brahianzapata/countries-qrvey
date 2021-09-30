@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { CountryService } from '../services/country.service';
 
 @Pipe({
-  name: 'favorito'
+  name: 'favorito',
+  pure: false
 })
 export class FavoritoPipe implements PipeTransform {
 

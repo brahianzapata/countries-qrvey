@@ -8,7 +8,7 @@
         <div class="input-group">
             <input class="form-control" placeholder="Search country" type="search" #textBuscar (keyup.enter)="buscarCountry(textBuscar.value)">
             <select [(ngModel)]="opcionSeleccionado" (change)="capturar()">
-                <option value="0">Selecciona una opción</option>
+                <option value="0">select an option</option>
                 <option *ngFor="let dato of datos">
                   {{dato}}
                 </option>

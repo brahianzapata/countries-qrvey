@@ -8,7 +8,7 @@ export interface CountryResponse {
     independent?: boolean;
     status?:       string;
     unMember:     boolean;
-    currencies?:  Currencies;
+    currencies?:  any;
     idd:          Idd;
     capital?:     string[];
     altSpellings: string[];

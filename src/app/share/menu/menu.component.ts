@@ -11,7 +11,7 @@ export class MenuComponent implements OnInit {
   datos : string[];
 
   constructor( private router: Router){
-    this.datos = ['ShowAll', 'Favorites', 'Africa', 'America', 'Asia', 'Europe', 'Oceania'];
+    this.datos = ['Show All', 'Favorites', 'Africa', 'America', 'Asia', 'Europe', 'Oceania'];
   }
   ngOnInit(): void {
   }
@@ -23,7 +23,7 @@ export class MenuComponent implements OnInit {
   capturar() {
       // Pasamos el valor seleccionado a la variable verSeleccion
       this.verSeleccion = this.opcionSeleccionado;
-      if( this.verSeleccion === 'ShowAll'){
+      if( this.verSeleccion === 'Show All'){
         this.router.navigate([`/home`]); 
         return;
       }

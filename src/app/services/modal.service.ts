@@ -98,9 +98,21 @@ export class ModalService {
     return this._ocultarModal;
   }
 
+  public currency: string[] = [];
+  public languages: string[] = [];
+  public countriesNames: string[] = [];
+
   abrirModal(name: string){
     this.countryService.getcountry(name).subscribe( resp => {
       this.countrySeleccionado = resp || [];
+      for (var key in this.countrySeleccionado[0].languages) {
+        this.languages.push(this.countrySeleccionado[0].languages[key])
+      }
+      for (var key1 in this.countrySeleccionado[0].currencies) {
+        for (var key2 in this.countrySeleccionado[0].currencies[key1]) {    
+            this.currency.push(this.countrySeleccionado[0].currencies[key1][key2])
+        }   
+      }
       this._ocultarModal = false;
    });
 
